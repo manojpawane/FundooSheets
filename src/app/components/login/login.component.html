@@ -1,0 +1,52 @@
+
+<ng4-loading-spinner> </ng4-loading-spinner>
+<div style="height:100%; width: 100%;">
+
+    
+    <div fxFlex=100 fxLayout="row" fxLayoutAlign="center center"  class="main-div">
+    <mat-card  class="login-mat-card" >
+
+        <div fxLayout="column" fxLayoutAlign="center center">
+            <div  class="circle-div" fxLayoutAlign="center center">
+                <img class="logo" src="../../../assets/images/Group 3521.svg">
+            </div>
+
+
+            <div class="inputs">
+                <mat-form-field appearance="outline" class="form-field">
+                    <mat-label>EmailId</mat-label>
+                    <input matInput autocomplete="off"  maxlength="254" [formControl]="email" >
+                <!-- <mat-error>This isn't Valid Email</mat-error> -->
+                <mat-error *ngIf="email.invalid">{{getErrorMessageEmail()}}</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="password-div">
+                <mat-form-field appearance="outline" class="form-field1" >
+                    <mat-label>Password</mat-label>
+                    <input matInput [type]="hide ? 'text' : 'password'" autocomplete="off"
+                        maxlength="100" [formControl]="password">
+                    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}
+                    </mat-icon>
+                    <mat-error *ngIf="password.invalid">{{getErrorMessagePassword()}}</mat-error>
+                </mat-form-field>
+                <div class="forgot-div">
+
+                    <a class="forgot" (click)="forgotpassword()"><u>?Forgot Password</u></a>
+                </div>
+            </div>
+            <div class="button-div">
+                <button mat-button class="login-button" (click)="login()"  
+                [disabled]="email.invalid || password.invalid">Login</button>
+            </div>
+            <div class="forgot-div"  fxLayoutAlign="center center" >
+
+                <a class="forgot" (click)="register()"><u>Create Account?Click Here</u></a>
+            </div>
+
+</div>
+    </mat-card>
+
+
+   </div>
+    
+</div>

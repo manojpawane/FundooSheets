@@ -1,0 +1,112 @@
+@import '../../scss/color.scss';
+@import '../../scss/constant.scss';
+
+.leftdiv{
+    width: 40%;
+    height: fit-content;
+    border: 1px solid #E2E2E2;
+    margin-left: 24px;
+    margin-top: 19px;
+}
+.rightdiv{
+width: 47%;
+height: 90%;
+border: 1px solid #E2E2E2;
+margin-right: 1px;
+
+}
+.techStack{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.textdiv{
+    font-size: $_heading_font_size;
+    color: $_input_font_color;
+    font-weight: 500;
+
+}
+.adCenterText{
+    font-size: $_heading_font_size;
+    color: $primary-color;
+    font-weight: 500;
+}
+.numdiv{
+    background-color: #008CFF;
+    color: azure;
+    border-radius: 12px 12px 12px 12px;
+    font-size: 11px;
+    text-align: center;
+    height: 12px;
+    width: fit-content;
+    padding: 5px 8px;
+}
+.supertechtype1{
+    margin-top: 15px;
+    height: 90%;
+    width: fit-content;
+    margin-left: 17px;
+    margin-top: 26px;
+    margin-bottom: 15px;
+}
+
+.techtype{
+    width: 106px;
+    height: 44px;
+    align-content: center;
+    text-align: center;
+    border-radius: 7px 7px 7px 7px; 
+    margin-top: 10px
+}
+.textdiv1{
+    font-size:$_subtext_font_size;
+    color: $subtext_font_color;
+    font-weight: 100;
+
+}
+.city{
+    min-width: 181px;
+    height: 113px;
+    border-radius: 5px 5px 5px 5px;
+    margin-top: 10px;
+}
+.contentdiv{
+    width: 100%;
+    height: 100%;
+    border-radius: 7px 7px 0px 0px;
+}
+.cityName{
+    width: 100%;
+    height: 35%;
+    border-radius: 7px 7px 0px 0px;
+    font-size: $_inputbox_font_size;
+    background-color: #F5F5F5
+    // align-content: center;
+    // text-align: center
+}
+.cityContent{
+    font-size: $_inputbox_font_size;
+}
+.AllContent{
+    width: 100%;
+    padding-top: 5px;
+    height: 65%;
+}
+.enginername{
+    height: 3vw;
+    width: 10vh;
+}
+.numdiv1{
+    font-size: 30px;
+}
+.description{
+    margin-left: 0px;
+    font-size: $_subtext_font_size;
+    margin: 0.5vh;
+    padding-top: 6px;
+}
+.divider{
+    min-height: 41px;
+    color: transparent ;
+    border-left:1px solid #C3C8CC;  
+}
+

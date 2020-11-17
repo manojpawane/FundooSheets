@@ -1,0 +1,16 @@
+<div   class="head" fxLayout="column" fxLaoutAlign="center center">
+    <div fxLayout="row" fxLayoutAlign="center center">
+              <h4>{{data.message}}</h4>
+  </div>
+  <div fxLayout="row"  class = "buttonDiv" fxLayoutAlign="end center"   >
+      <button  mat-raised-button [mat-dialog-close]="true" class="mat-button1"  style="background-color:#008CFF">
+          <p class="sidelist1"  >Yes</p>
+        </button>
+      
+          <button [mat-dialog-close]="false" fxFlexOffset="15" mat-raised-button class="mat-button1"  > 
+            <p class="sidelist1">No</p>
+          </button>
+        </div>    
+    
+  </div>
+  

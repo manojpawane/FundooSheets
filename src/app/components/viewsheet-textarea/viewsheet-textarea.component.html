@@ -1,0 +1,13 @@
+<textarea  *ngIf="headerType !== 'count' && headerType !== 'number'" matInput  cdkTextareaAutosize #textArea #autosize="cdkTextareaAutosize"
+ [formControl]="content" required [ngClass]=" content.valid ? 'input' : 'error'"  (keyup)="textContent($event.target.value)"
+  ></textarea>
+
+  <textarea   *ngIf="headerType === 'count' && headerType !== 'number'" matInput  cdkTextareaAutosize #textArea #autosize="cdkTextareaAutosize"
+ [formControl]="content" required [ngClass]=" content.valid ? 'input' : 'error'"  (keyup)="textContent($event.target.value)"
+  (keypress)="myfunction($event)?true :false;"></textarea>
+
+  <textarea   *ngIf="headerType === 'number' && headerType !== 'count'" matInput  cdkTextareaAutosize #textArea #autosize="cdkTextareaAutosize"
+  [formControl]="content" required [ngClass]=" content.valid ? 'input' : 'error'"  (keyup)="textContent($event.target.value)"
+  (keypress)="numfunction($event)?true :false;"></textarea>
+    <!-- <input *ngIf="headerType === 'count'" type="text" value="" [formControl]="content" required [ngClass]=" content.valid ? 'input' : 'error'"
+    (keypress)="myfunction($event)?true :false;"      (keyup)="textContent($event.target.value)" /> -->

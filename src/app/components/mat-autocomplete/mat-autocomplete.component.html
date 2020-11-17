@@ -1,0 +1,24 @@
+<div *ngIf="headerType !== 'count' && headerType !== 'number'" >
+    <input matInput #autoComplete [formControl]="content" [matAutocomplete]="auto" [ngClass]=" content.valid ? 'autocomplete' : 'errorAuto'" (keyup)="textContent($event.target.value)">
+    <mat-autocomplete #auto="matAutocomplete"  (optionSelected)="textContent($event.option.value)">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+</div>
+<div *ngIf="headerType === 'count' && headerType !== 'number'" >
+    <input matInput #autoComplete [formControl]="content" [matAutocomplete]="auto" [ngClass]=" content.valid ? 'autocomplete' : 'errorAuto'" (keyup)="textContent($event.target.value)" (keypress)="myfunction($event)?true :false;">
+    <mat-autocomplete #auto="matAutocomplete"  (optionSelected)="textContent($event.option.value)">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+</div>
+<div *ngIf="headerType === 'number' && headerType !== 'count'">
+    <input matInput #autoComplete [formControl]="content" [matAutocomplete]="auto" [ngClass]=" content.valid ? 'autocomplete' : 'errorAuto'" (keyup)="textContent($event.target.value)"  (keypress)="numfunction($event)?true :false;">
+    <mat-autocomplete #auto="matAutocomplete"  (optionSelected)="textContent($event.option.value)">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+</div>

@@ -1,0 +1,71 @@
+{
+   
+           "Lab" : [
+                {
+                    "City": "Mumbai",
+                    "Enginer": "10",
+                    "Selected": "10"
+                },
+                {
+                    "City": "Pune",
+                    "Enginer": "120",
+                    "Selected": "800",
+                    "Location": "20"
+                },
+                {
+                    "City": "Banglore",
+                    "Enginer": "11",
+                    "Selected": "8"
+                }
+            ],
+        "TechStack": [
+                {
+                    "City": "bhopal",
+                    "Enginer": "110",
+                    "Selected": "880"
+                },
+                {
+                    "City": "mumbai",
+                    "Enginer": "120",
+                    "Selected": "800",
+                    "Location": "20"
+                },
+                {
+                    "City": "Delhi",
+                    "Enginer": "11",
+                    "Selected": "8"
+                }
+            ],
+            "TechStack1": [
+                {
+                    "City": "Mumbai",
+                    "Enginer": "510",
+                    "Selected": "980"
+                },
+                {
+                    "City": "rajisthan",
+                    "Enginer": "120",
+                    "Selected": "800",
+                    "Location": "20"
+                },
+                {
+                    "City": "pune",
+                    "Enginer": "11",
+                    "Selected": "8"
+                }
+            ],
+            "TechStack2": [
+                {
+                    "City": "Mumbai",
+                    "Enginer": "510",
+                    "Selected": "980"
+                },
+                
+                {
+                    "City": "pune",
+                    "Enginer": "11",
+                    "Selected": "8"
+                }
+            ]
+    
+}

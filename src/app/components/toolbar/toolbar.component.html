@@ -1,0 +1,63 @@
+
+    <div fxLayout="column" fxLayoutAlign="start" >
+      <div fxLayout="row" fxLayoutAlign="start" fxFlex="100">
+        <mat-toolbar class="matToolbar">
+          <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100">
+            <div fxLayout="row" fxLayoutAlign="center center" class="imageDiv" >
+              <img src="../../../assets/images/Group 3521.svg">
+            </div>
+        
+            <div fxFlex="60">
+              <mat-form-field appearance="outline" class="formfield">
+                <mat-icon matPrefix>search</mat-icon>
+                <!-- <div fxLayout="row" fxFlex.lg="35" fxFlex.md="40" fxFlex.xs="90" fxFlex.sm="90"> -->
+                <input matInput placeholder="Search" name="search">
+                <!-- </div> -->
+
+              </mat-form-field>
+            </div>
+
+            <div>
+              <button mat-icon-button matTooltip="profile" [matMenuTriggerFor]="menu">
+                <img mat-card-avatar src="../../../assets/images/account.svg">
+              </button>
+
+              <div fxLayout="row" fxLayoutAlign="start center" fxFlex="100">
+                <mat-menu #menu="matMenu">
+                  <div fxLayout="column" fxLayoutGap="5%">
+
+
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                      <div class="img1">
+                        <img class="img1" mat-card-avatar src="../../../assets/images/account.svg">
+                      </div>
+                    </div>
+                    <!-- <div fxLayout="column" fxLayoutAlign="center center">
+                      <mat-card-title class="text_color">&nbsp;{{username}}</mat-card-title>
+                    </div> -->
+                    <div fxLayout="column" fxLayoutAlign="start center">
+                      <mat-card-subtitle class="text_color1"> {{emailId}}</mat-card-subtitle>
+                    </div>
+
+                    <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="25px">
+                      <!-- <button mat-raised-button class = "mat-button1">
+                        <p class="sidelist1">Change Password</p>
+                      </button> -->
+                      <button mat-raised-button class = "mat-button1"  (click)="logout()">
+                          <p class="sidelist1">Logout</p>
+                        </button>
+                    </div>
+                  </div>
+                </mat-menu>
+              </div>
+            </div>
+          </div>
+        </mat-toolbar>
+      </div>
+
+
+   
+ <div class="routerdiv" >
+    <router-outlet ></router-outlet>
+  </div>
+</div>

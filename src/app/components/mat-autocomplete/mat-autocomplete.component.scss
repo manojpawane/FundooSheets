@@ -1,0 +1,29 @@
+
+@import'../../scss/constant.scss';
+@import'../../scss/color.scss';
+.autocomplete
+{ 
+       width: 96%;
+    outline: none;
+    border: none;
+    margin-top: 2px;
+    min-height: 18px;
+    margin-left: 4px;
+    color: #40494D;
+    font-size: 12px;
+    font-family:$font_family;
+    word-wrap: break-word;
+}
+.errorAuto
+{
+    width: 96%;
+    outline: none;
+    border: none;
+    margin-top: 2px;
+    min-height: 18px;
+    margin-left: 4px;
+    color:red;
+    font-size: 12px;
+    font-family:$font_family;
+    word-wrap: break-word;
+}

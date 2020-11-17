@@ -1,0 +1,105 @@
+<ng4-loading-spinner> </ng4-loading-spinner>
+<div fxLayout="column" class="main-div" fxLayoutGap="1%">
+    <div fxLayout="column" fxLayoutGap="5%">
+        <div fxLayout="column">
+            <div class="heading"  *ngIf="projectName">{{projectName}}</div>
+            <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="1%">
+                <button mat-button class="cancel" (click)="cancel()">Cancel</button>
+                <button mat-stroked-button class="save" (click)="saveRows()">Save</button>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="1%">
+                <mat-icon class="file-icon">description</mat-icon>
+                <div *ngIf="sheetNames" class="tech">{{sheetNames.sheetName}}</div>
+                <div class="share" fxLayoutAlign="end end">
+                    <mat-icon class="share-icon">share</mat-icon>
+                </div>
+            </div>
+        </div>
+
+        <div fxLayout="column" class="scroll-div">
+
+            <div fxLayout="row" fxFlex="100" style="position: sticky;top: 0;z-index:1; min-width: fit-content;">
+                <div fxFlex="20px" class="header-sr" fxLayoutAlign="center center"
+                    style="position: sticky;top: 0;z-index:1;">Sr</div>
+                <div fxFlex class="header" *ngFor="let head of headersData,let j=index">
+                    <div fxLayoutAlign="center center" matTooltip="Formate:'{{head.format}}'"> {{head.name}}
+                    </div>
+                </div>
+
+            </div>
+            <div fxLayout="row" *ngFor="let item of num,let j=index" fxFlex="100">
+
+                <div fxFlex="20px" class="srno" fxLayoutAlign="center center"
+                    style="position: sticky;left: 0;z-index:0;" mat-button [matMenuTriggerFor]="menu">{{j+1}}</div>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item style="height: 23px; line-height: 17px" *ngIf="item"
+                        (click)="openDialog(item._id)">Delete</button>
+                </mat-menu>
+                <div class="row" fxFlex *ngFor="let rows of rowsData;let i = index">
+                    <div class="Dropdown" fxLayout='row'  *ngIf="rows.isEnum == true && rows.allowSuggestion != true">
+                            
+                        <div fxFlex class="dropDownText" fxLayoutAlign='center start' *ngIf="!item.isRowClicked || !rows.isColumnClicked" (click)="focusIndexChange(j,i)">
+                                {{item[headersData[i].name]}}
+                        </div>
+                            <mat-icon class="selectIcon" *ngIf="!item.isRowClicked || !rows.isColumnClicked" (click)="focusIndexChange(j,i)">arrow_drop_down</mat-icon>
+                            
+                            <div fxFlex *ngIf="item.isRowClicked && rows.isColumnClicked"  [ngClass]="item.isRowClicked && rows.isColumnClicked ? 'Dropdown1':'Dropdown2'">
+                         <app-mat-select fxFlex 
+                            [selectedValue]=item[headersData[i].name] 
+                            (messageEvent)="reciveOption($event,j,i);item[headersData[i].name]=$event" [rows]="rows">
+                        </app-mat-select>
+                  </div>
+                    </div>
+                    <div class="Dropdown" fxLayout='row' *ngIf="rows.isEnum == true && rows.allowSuggestion == true">
+                            <div fxFlex fxLayoutAlign="center start" class="dropDownText" *ngIf="!item.isRowClicked || !rows.isColumnClicked" (click)="focusIndexChange(j,i)">
+                                    {{item[headersData[i].name]}}
+                                </div>
+                            <mat-icon class="selectIcon" *ngIf="!item.isRowClicked || !rows.isColumnClicked" (click)="focusIndexChange(j,i)">arrow_drop_down</mat-icon>
+                            <div fxFlex *ngIf="item.isRowClicked && rows.isColumnClicked"  [ngClass]="item.isRowClicked && rows.isColumnClicked ? 'Dropdown1':'Dropdown2'">
+                        <app-mat-select fxFlex *ngIf="item.isRowClicked && rows.isColumnClicked" [selectedValue]=item[headersData[i].name]
+                            (messageEvent)="reciveOption($event,j,i);item[headersData[i].name]=$event" [rows]="rows"></app-mat-select>
+                            </div>
+                    </div>
+                   
+                    <div class="autoCompleteRow" *ngIf="(rows.allowSuggestion==true && rows.isEnum == false)  ">
+                        <div class="autoComplete" *ngIf="!item.isRowClicked || !rows.isColumnClicked"
+                            (click)="focusIndexChange(j,i)">
+                            {{item[headersData[i].name]}}
+                        </div>
+                        <div [ngClass]="item.isRowClicked && rows.isColumnClicked ? 'autocomplete1':'autocomplete12'">
+                        <app-mat-autocomplete *ngIf="item.isRowClicked && rows.isColumnClicked"
+                            [selectedValue]=item[headersData[i].name] [suggestionArray]=suggestionArray[i]
+                            [formate]=headersData[i].format [headerType]="rows.headerType"
+                            (messageEvent)="reciveAutoMessage($event,j,i);item[headersData[i].name]=$event ">
+                        </app-mat-autocomplete>
+                   </div>        
+                    </div>
+                    <div class="textAreaRow" *ngIf="(rows.allowSuggestion==false && rows.isEnum==false) "
+                        fxLayoutAlign="start start">
+                        
+                        <div class="textArea" *ngIf="!item.isRowClicked || !rows.isColumnClicked"
+                            (click)="focusIndexChange(j,i)">
+                            {{item[headersData[i].name]}}
+                        </div>
+                        <div [ngClass]="item.isRowClicked && rows.isColumnClicked  ? 'textArea1':'textArea2'">
+                        <app-viewsheet-textarea [textMessage]=item[headersData[i].name] [headerType]="rows.headerType" [formate]=headersData[i].format
+                            *ngIf="item.isRowClicked && rows.isColumnClicked"
+                            (messageEvent)="reciveTextMessage($event,j,i);item[headersData[i].name]=$event" >
+                        </app-viewsheet-textarea>
+                    </div>
+                    </div>
+               
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div fxLayout="row" fxLayoutGap="1%">
+        <button mat-button (click)="addRows(arrayLength)" class="add-button">Add</button>
+        <div fxLayoutAlign="center center" class="count">
+            <input class="num-input" type="number" min="0" max="99" pattern="/^-?\d+\.?\d*$/"
+                onKeyPress="if(this.value.length==2) return false;" [(ngModel)]="arrayLength" required>
+        </div>
+        <div fxLayoutAlign="center center" class="more-rows">More rows on button</div>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+<ng4-loading-spinner> </ng4-loading-spinner>
+<div>
+<div *ngIf="eumnData" style="height: 100%;width: 100%"   fxLayout="row wrap" fxLayoutAlign="start start" dir="ltr" fxLayoutGap="40px">
+    <div   class="leftdiv" fxLayout="column" fxLayoutAlign="start start" *ngFor="let key of techtypeData">
+        <div  class="techStack" fxLayout="row wrap" fxLayoutAlign="start center" dir="ltr" fxLayoutGap="10px">
+            <div class="textdiv">{{key.name}}</div>
+            <div class="numdiv">{{key.report.length}}</div>
+        
+            
+        </div>
+        <div    fxLayout="row wrap" fxLayoutAlign="start start" dir="ltr" fxLayoutGap="10px" class="supertechtype1">
+
+
+            </div>
+            <div fxLayout="row wrap" fxLayoutAlign="start start" dir="ltr" fxLayoutGap="10px" class="supertechtype1">
+
+                <div class="city" fxLayout="row wrap" fxLayoutAlign="start start" dir="ltr"
+                    style="border:1px solid #C3C8CC;" *ngFor="let items of key.report;let j=index ">
+                    <div class="contentdiv">
+
+                        <div class="cityName" fxLayout="row" fxLayoutAlign="center center">
+                            <div class="cityContent">{{items?._id}}</div>
+                        </div>
+                        <div fxLayout="row" fxLayoutAlign="center center">
+                            <div *ngFor="let keyReport of objectKeys(items);let k=index" fxLayout="row"
+                                fxLayoutAlign="center center">
+
+                                <div class="AllContent" fxLayout="column" fxLayoutAlign="space-around center"
+                                    *ngIf="keyReport!='_id'">
+                                    <div fxLayout="row" fxLayoutAlign="space-around center" class="numdiv1">
+                                        {{items[keyReport]}}</div>
+                                    <div fxLayout="row" fxLayoutAlign="space-around center" class="description">
+                                        {{keyReport}}</div>
+                                </div>
+                                <div *ngIf="k<objectKeys(items).length-1 && keyReport!='_id'" style="
+                        width: 1px;
+                        background-color: #E2E2E2;
+                        height: 40px;     margin: 0px 4px;
+                    "></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div style="width: 100%;margin-top: 12%" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px"
+        *ngIf="!eumnData">
+        <div>
+            <img src="../../../assets/images/Group 3523.svg">
+        </div>
+
+        <div class="adCenterText">
+            <span>Can't generate report , No enum headertype found</span>
+        </div>
+
+    </div>
+</div>

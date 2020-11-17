@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./app/scss/color.scss";
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+* {
+    font-family: Lato, "Helvetica Neue", sans-serif;
+    }
+html, body { height: 96%; }
+.SUCCESS{
+    background: #34E2AF;
+    color: #FFFFFF;
+    font-weight: bold;
+  }
+  .ERROR{
+    background: #FF4D4D;
+    color: #FFFFFF;
+    font-weight: bold;
+  }
+  .WARNING{
+    background: #F7B449;
+    color: #FFFFFF;
+    font-weight: bold;
+  }
+  .INFO{
+    background: #599CFC;
+    color: #FFFFFF;
+    font-weight: bold;
+  }
+  .custom-snackbar {
+    .mat-button-wrapper {
+        color:$primary_color !important;
+    }
+  }
+  .loader-style .mat-dialog-container {
+    padding: 0px !important;
+    box-shadow: unset !important;
+    background: unset !important;
+  }

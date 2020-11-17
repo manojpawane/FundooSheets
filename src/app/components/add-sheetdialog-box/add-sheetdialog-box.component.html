@@ -1,0 +1,134 @@
+<div fxLayout="column" fxLaoutAlign="start center">
+    <div fxLayout="row" fxLayoutAlign="space-between start" class="card">
+
+        <div>
+            <span>Header Validation</span>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="end center">
+
+            <mat-icon class="maticonmargin" (click)="onNoClick()">clear</mat-icon>
+
+        </div>
+
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="120px">
+        <div>
+            <span class="text">Type: </span>
+        </div>
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Type</mat-label>
+
+                <mat-select [(value)]="selected" [formControl]="headerTypes">
+
+                    <mat-option *ngFor="let headerTypes of Type" [value]="headerTypes.value">{{headerTypes.viewValue}}
+                    </mat-option>
+
+                </mat-select>
+                <mat-error *ngIf="headerTypes.invalid" style="margin-top: -2px;">Please Select</mat-error>
+            </mat-form-field>
+
+        </div>
+    </div>
+
+    <div *ngIf="selected=='text'" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="103px" class="topmargin">
+        <div>
+            <span class="text">Format: </span>
+        </div>
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Format</mat-label>
+
+                <mat-select [formControl]="formatType">
+
+                    <mat-option *ngFor="let formatType of Format" [value]="formatType.value">{{formatType.viewValue}}
+                    </mat-option>
+
+
+                </mat-select>
+
+                <mat-error *ngIf="formatType.invalid" style="margin-top: -2px;">Please Select</mat-error>
+            </mat-form-field>
+        </div>
+
+    </div>
+    <div *ngIf="selected!='text'" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="103px" class="topmargin">
+        <div>
+            <span class="text">Format: </span>
+        </div>
+        <div>
+            <mat-form-field appearance="outline">
+                <mat-label>Format</mat-label>
+
+                <mat-select [formControl]="formatType">
+
+                    <mat-option value="none">None</mat-option>
+
+
+                </mat-select>
+
+                <!-- <mat-error *ngIf="formatType.invalid" style="margin-top: -2px;">Please Select</mat-error> -->
+            </mat-form-field>
+        </div>
+
+    </div>
+    <div *ngIf="selected=='enum'" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="98px" class="topmargin">
+        <div>
+            <span class="text">Options: </span>
+        </div>
+        <div>
+            <mat-form-field class="demo-chip-list" appearance="outline">
+                <mat-chip-list #chipList>
+                    <mat-chip *ngFor="let keyword of keywords" [selectable]="selectable" [removable]="removable"
+                        (removed)="remove(keyword)">
+                        {{keyword}}
+                        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                    </mat-chip>
+                    <input [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                        [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)" />
+                </mat-chip-list>
+            </mat-form-field>
+        </div>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="25px">
+
+        <div>
+
+            <label class="text">Allow suggestions: </label>
+        </div>
+        <div *ngIf="selected !='enum'" fxLayoutGap="91px">
+            <mat-checkbox [checked]="allowSelected === true" (change)="allowSelected = true"><span
+                    class="text1">Yes</span></mat-checkbox>
+            <mat-checkbox [checked]="allowSelected === false" (change)="allowSelected = false"><span
+                    class="text1">No</span></mat-checkbox>
+        </div>
+        <div *ngIf="selected =='enum'" fxLayoutGap="91px">
+            <mat-checkbox [disabled]=true><span class="text1">Yes</span></mat-checkbox>
+            <mat-checkbox [checked]="allowSelected === false" (change)="allowSelected = false"><span
+                    class="text1">No</span></mat-checkbox>
+        </div>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="35px" class="spacing1">
+        <div>
+            <span class="text">Required: </span>
+        </div>
+        <div class="margin" fxLayoutGap="90px">
+            <mat-checkbox [checked]="requiredSelected === true" (change)="requiredSelected = true"><span
+                    class="text1">Yes</span></mat-checkbox>
+            <mat-checkbox [checked]="requiredSelected === false" (change)="requiredSelected = false"><span
+                    class="text1">No</span></mat-checkbox>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="30px" class="spacing">
+
+        <button mat-button (click)="onNoClick()">Cancel</button>
+
+
+        <button mat-raised-button color="primary" (click)="onSave()">Save</button>
+
+    </div>
+</div>

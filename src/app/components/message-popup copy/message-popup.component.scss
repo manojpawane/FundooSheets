@@ -1,0 +1,30 @@
+@import '../../scss/constant.scss';
+@import '../../scss/color.scss';
+
+
+.matbutton1{
+    width: 192px;
+    line-height: 1px;
+    margin-top: 7px;
+    font-size:$_subtext_font_size;
+  
+  }
+  .mat-raised-button{
+    width: 74px;
+    height: 33px;
+    line-height: 0px;
+  }
+  .mat-button2{
+  
+    font-size:$_subtext_font_size;
+    color:$button_font_color;
+    align-content: center;
+   
+  }
+  .buttonDiv{
+    max-width: 90%;
+  }
+
+  mat-button1 mat-raised-button{
+padding: 0px
+  }

@@ -1,0 +1,30 @@
+<div fxFill fxLayout="column" fxLayoutAlign="space-between center">
+
+    <div fxLayout="row" fxLayoutAlign="start center">
+        <mat-form-field appearance="outline" class="name">
+            <mat-label>Project Name</mat-label>
+            <input matInput [formControl]="projectName">
+            <mat-error *ngIf="projectName.invalid">{{projectNameError()}}</mat-error>
+        </mat-form-field>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="start center">
+        <mat-form-field appearance="outline" class="description">
+            <mat-label>Description</mat-label>
+            <textarea matInput type="text" [formControl] = "description"></textarea>
+            <mat-error *ngIf="description.invalid">{{descriptionError()}}</mat-error>
+        </mat-form-field>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="end end" class = "addProjectButton">
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <button mat-button [mat-dialog-close]="true">Cancel</button>
+        </div>
+
+        <div>
+            <button mat-raised-button color="primary" [mat-dialog-close]="true" (click) = "addProject(project)" 
+            [disabled]="projectName.invalid || description.invalid">Create</button>
+        </div>
+    </div>
+
+</div>

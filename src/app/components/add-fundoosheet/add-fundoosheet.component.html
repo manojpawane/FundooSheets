@@ -1,0 +1,137 @@
+<ng4-loading-spinner> </ng4-loading-spinner>
+<div fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="15px">
+
+  <!-- <div *ngIf="sheets?.length > 0"> -->
+    <div>
+
+    <!-- here new componenet merging-->
+    <div  fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="15px">
+      <div *ngFor="let items of sheets" fxLayoutGap="5px">
+        <div fxLayout="column" fxLayoutAlign="start" fxLayoutGap="5px" class="mainDiv1">
+          <div fxLayout="row" fxLayoutAlign="space-between center">
+            <div class="nameInput"> {{items.sheetInfo.sheetName}}</div>
+
+            <span class="maticon21" [matMenuTriggerFor]="menu"></span>
+
+
+          </div>
+          <div *ngFor="let items1 of items.fieldInfo">
+
+            <div  *ngIf="items1.isDeleted==false" fxLayout="row" fxLayoutAlign="space-between" class="bgcolor1">
+            <span  *ngIf="items1._id!=sheetId1" (click)="editfields(items1._id)"  class="sheettitle" >{{items1.name}}<span class="format">({{items1.headerType}})</span></span>
+             
+               <input *ngIf="items1._id =='sheetId1' || items1._id==sheetId1" matInput type="text" [(ngModel)]="items1.name" style=" font-size: 14px; outline: none"
+                placeholder="{{items1.name}}" />
+
+              <mat-icon matSuffix class="maticon2"  style="margin-right: -1px"  [matMenuTriggerFor]="menu1"></mat-icon>
+
+
+            </div>
+         
+            <mat-menu #menu1="matMenu" [overlapTrigger]="false">
+              <button mat-menu-item (click)="edit(items.sheetInfo._id,items1._id,items1.name)">
+                <span>Update</span>
+              </button>
+
+              <button mat-menu-item (click)="deletefields(items.sheetInfo._id,items1._id)">
+
+                <span>Delete</span>
+              </button>
+            </mat-menu>
+          </div>
+
+          <mat-menu #menu="matMenu" [overlapTrigger]="false">
+            <button mat-menu-item  (click)="openSheets(items.sheetInfo._id)">
+              <span>Open</span>
+            </button>
+
+            <button mat-menu-item (click)="deleteSheet(items.projectId,items.sheetInfo._id)">
+
+              <span>Delete</span>
+            </button>
+          </mat-menu>
+
+
+          <div>
+            <div *ngIf="popup3 && (addHeader == items.sheetInfo._id)">
+              <div fxLayout="row" fxLayoutAlign="space-between center" class="bgcolor">
+                <input matInput type="text" placeholder="Enter Header" [formControl]="header" class="input"
+                  style=" font-size: 14px;" />
+
+                <span class="maticon2"   style="margin-right: 3px" (click)="openDialogue(items.sheetInfo._id)"></span>
+              </div>
+
+            </div>
+          </div>
+          <div fxLayout="row" *ngIf="!popup3 || (addHeader != items.sheetInfo_id)"
+            (click)="onPopup3(items.sheetInfo._id)" fxLayoutAlign="start center"  style="margin: 10px">
+            <div class="maticon1">
+              <mat-icon>add</mat-icon>
+            </div>
+            <div class="text" style="margin-bottom: 8px;"> Add Header </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="!popup1" style="margin: 10px" >
+        <div fxLayout="row" fxLayoutAlign="start center" class="margin">
+          <div fxLayout="row" fxLayoutAlign="center center" class="mainDiv" *ngIf="!popup" (click)="onPopup()">
+    
+    
+            <a class="margin">
+              <mat-icon matPrefix class="icon">add</mat-icon> &nbsp;
+              Add fundooSheet
+            </a>
+          </div>
+    
+          <div *ngIf="popup" fxLayout="row" fxLayoutGap='20px'>
+            <!-- <div *ngFor="let tem of c"> -->
+            <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap='20px'>
+              <a class=mainDiv3>
+                <div fxLayout="row" fxLayoutAlign="center center">
+                  <input matInput type="text" placeholder=" Enter sheet name" class="input" style=" font-size: 14px;"
+                    [formControl]="sheetNames" />
+    
+                </div>
+    
+                <div fxLayout="row" fxLayoutAlign="center center">
+                  <textarea matInput type="text" placeholder=" Description" class="input1" style=" font-size: 14px;"
+                    [formControl]="description"></textarea>
+                </div>
+    
+                <div fxLayout="row" fxLayoutAlign="end end" fxLayoutGap="20px" class="spacing">
+                  <div fxLayout="row" fxLayoutAlign="center center">
+                    <button mat-button class="button-cancel" (click)="onPopup()">Cancel</button>
+                  </div>
+    
+                  <div *ngIf="!popup1" (click)="onPopup1()">
+                    <button mat-raised-button color="primary" class="button-add">Add</button>
+                  </div>
+                </div>
+              </a>
+            </div>
+            
+          </div>
+ 
+        </div>
+     
+      </div>
+    
+    
+      <div fxLayout="row" fxLayoutAlign="center center" class="mainDiv" *ngIf="popup">
+    
+    
+          <a class="margin">
+            <mat-icon class="icon">add</mat-icon>&nbsp;
+            Add fundooSheet
+          </a>
+    
+        </div> 
+    </div>
+
+  
+  </div>
+
+
+
+
+</div>

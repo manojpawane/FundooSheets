@@ -1,0 +1,27 @@
+@import 'constant.scss';
+$primary_color:#008CFF;
+$background_color:#F7F7F7;
+$_input_font_color:#40494D;
+$button_font_color:#FFFFFF;
+$subtext_font_color:#143A50;
+$header_font_color:#737475;
+
+@mixin dialog_heading($font_weight,$border_radius) {
+    font-size: $_heading_font_size;
+    font-family: $font_family;
+    font-weight:$font_weight;
+    color:$button_font_color;
+    background-color:$primary_color;
+    border-radius: $border_radius;
+}
+@mixin  form() {
+    font-family: $font_family;
+    background-color: white;
+    color: $_input_font_color;
+    font-weight: 400;
+}
+
+@mixin  disable_button {
+    color: $button_font_color !important;
+    opacity: 0.6 !important;
+}

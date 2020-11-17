@@ -1,0 +1,99 @@
+<div class="head">
+  <mat-sidenav-container fxFlexFill class="mainContainer">
+    <mat-sidenav #sidenav mode="side" opened class="sidenavContainer">
+      <div fxLayout="column" fxLayoutAlign="start start" fxFlex="0" id="1">
+        <div class="positionClass">
+          <div fxLayout="row" fxLayoutAlign="center center" class="imageDiv" (click)="project()">
+            <img src="../../../assets/images/Group 3521.svg">
+          </div>
+          <div fxLayout="row" class="divbutton">
+            <mat-select placeholder="Tech Management" [(value)]="selectedValue" class="dropdowntext" matNativeControl
+              required>
+              <mat-option *ngFor="let items of projects" [value]="items.projectName" (click)="setLocalStorage()"
+                (click)="getSheets(items._id)">
+                {{items.projectName}}</mat-option>
+            </mat-select>
+          </div>
+        </div>
+      </div>
+      <div fxLayout="column" id="hello">
+        <div fxLayout="column" *ngFor="let sheets of sheets"
+          (click)="getRecord(sheets.sheetInfo.projectId,sheets.sheetInfo._id)">
+          <button mat-button [ngClass]="sheets.sheetInfo._id === toggleId ? 'matbuttonOnclick' : 'matbutton1'">
+            <div fxLayout="row" fxLayoutAlign="start center" dir="ltr" fxLayoutGap="20px">
+              <mat-icon>filter_none</mat-icon>
+              <p class="sidelist">
+                {{sheets.sheetInfo.sheetName}}</p>
+            </div>
+          </button>
+        </div>
+        <div fxLayout="row">
+          <button mat-button class="matbutton1"
+            [ngClass]="toggleId === 'fundooSheetButton' ? 'matbuttonOnclick' : 'matbutton1'"
+            (click)="fundooSheets('fundooSheetButton')">
+            <div fxLayout="row" fxLayoutAlign="start center" dir="ltr" fxLayoutGap="18px">
+              <mat-icon> description</mat-icon>
+              <p class="sidelist"> fundooSheets</p>
+            </div>
+          </button>
+        </div>
+
+        <div fxLayout="row">
+          <button mat-button class="matbutton1"
+            [ngClass]="toggleId === 'settingButton' ? 'matbuttonOnclick' : 'matbutton1'"
+            (click)="setting('settingButton')">
+            <div fxLayout="row" fxLayoutAlign="start center" dir="ltr" fxLayoutGap="21px">
+              <mat-icon>brightness_high</mat-icon>
+              <p class="sidelist"> settings</p>
+            </div>
+          </button>
+        </div>
+      </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <mat-toolbar class="matToolbar">
+          <div fxFlex="80">
+            <mat-form-field appearance="outline" class="formfield">
+              <mat-icon matPrefix>search</mat-icon>
+              <input matInput placeholder="Search" name="search">
+              <!-- </div> -->
+            </mat-form-field>
+          </div>
+
+          <div>
+              <button mat-icon-button matTooltip="profile" [matMenuTriggerFor]="menu" >
+                  <img       style="width: 40px;height: 40px;"   mat-card-avatar src="../../../assets/images/account.svg">
+                </button>
+            
+          </div>
+        </mat-toolbar>
+        <div fxLayout="row" fxLayoutAlign="start center" fxFlex="100">
+            <mat-menu #menu="matMenu">
+              <div fxLayout="column" fxLayoutGap="5%">
+                <div fxLayout="row" fxLayoutAlign="center center">
+                  <div class="img1">
+                    <img  mat-card-avatar src="../../../assets/images/account.svg">
+                  </div>
+                </div>
+                <div fxLayout="column" fxLayoutAlign="start center">
+                  <mat-card-subtitle class="text_color1"> {{emailId}}</mat-card-subtitle>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="25px">
+                  <button mat-raised-button class="mat-button1" (click)="logout()">
+                    <p class="sidelist1">Logout</p>
+                  </button>
+                </div>
+              </div>
+            </mat-menu>
+          </div>
+      </div>
+
+      <div class="routerdiv">
+        <div class="marginBottom"></div>
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

@@ -1,0 +1,33 @@
+@import'../../scss/constant.scss';
+@import'../../scss/color.scss';
+
+:host {
+  width: 100%;
+}
+.error
+{
+  color:red;
+  font-size: 12px;
+  font-family: $font_family;
+  min-width: inherit;
+  width: -webkit-fill-available;
+  overflow: hidden;
+  margin-left: 2px;
+  outline: none;
+  border: none;
+ // height: 9%;
+}
+.input {
+  color: $_input_font_color;
+  font-size: 12px;
+  font-family: $font_family;
+  min-width: inherit;
+  width: -webkit-fill-available;
+  overflow: hidden;
+  margin-left: 2px;
+  outline: none;
+  border: none;
+ // height: 100%;
+
+}
+

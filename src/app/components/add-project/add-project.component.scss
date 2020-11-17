@@ -1,0 +1,83 @@
+@import '../../scss/constant.scss';
+@import '../../scss/color.scss';
+
+.mat-card 
+{
+    margin-left: 20px;
+    margin-top:20px; 
+    width: 170px;
+    height: 79px;
+    border-radius: 5px;
+    opacity: 1;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.card:hover
+{
+  box-shadow: 0 1px 3px #000000; 
+}
+
+
+.addProject
+{
+    font-family: $font_family;
+    font-size:$_inputbox_font_size; 
+    color:$primary_color; 
+    cursor: pointer;
+}
+
+.addProjectCenterText
+{
+    font-family: $font_family;
+    font-size: 35px;
+    color: #666D70;
+}
+
+.addProjectCenterText2
+{
+    font-family: $font_family;
+    font-size: 20px;
+    color: #ACADAD;
+}
+
+.addIcon
+{
+    margin-top: 15px;
+    color:$primary_color; 
+}
+
+.nameInput
+{
+    font-family: $font_family;
+    font-size:$_inputbox_font_size;
+    color: $_input_font_color;
+    font-weight: 500;
+}
+
+.mat-icon {
+    color:$primary_color;
+    background-repeat: no-repeat;
+    display: inline-block;
+    fill: currentColor;
+    height: 34px;
+    width: 34px;
+    cursor: pointer;
+}
+
+.mat-icon-button .mat-icon, .mat-icon-button i {
+    line-height: 33px;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 34px;
+    letter-spacing: normal;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+}
+

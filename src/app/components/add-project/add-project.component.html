@@ -1,0 +1,36 @@
+<ng4-loading-spinner> </ng4-loading-spinner>
+<div fxFlex="100" style="height: 100ch">
+    <div fxLayout="row wrap" fxLayoutAlign="start center" dir="ltr" style="margin-left: 29px;">
+        <mat-card class="card">
+            <div fxLayout="column" fxLayoutAlign="center center">
+                <div fxLayoutAlign="center center" class="addIcon">
+                    <mat-icon matTooltip="add project" (click)="openDialog()">add</mat-icon>
+                </div>
+                <div (click)="openDialog()" class="addProject">
+                    <span>Add Project</span>
+                </div>
+            </div>
+        </mat-card>
+
+        <div *ngFor="let items of projects">
+            <mat-card class="card" (click)="dashboard(items._id)" >
+                <div fxLayoutAlign="start start" class="nameInput" >{{items.projectName}}</div>
+            </mat-card>
+        </div>
+    </div>
+
+
+    <div fxLayout="column" fxLayoutAlign="center center" *ngIf="toggle == true">
+        <div>
+            <img src="../../../assets/images/Group 3523.svg">
+        </div>
+
+        <div class="addProjectCenterText">
+            <span>You haven't created a project yet!</span>
+        </div>
+
+        <div class="addProjectCenterText2">
+            <span>Click +Add to create a new project.</span>
+        </div>
+    </div>
+</div>

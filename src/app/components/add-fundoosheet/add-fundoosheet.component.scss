@@ -1,0 +1,406 @@
+@import '../../scss/constant.scss';
+@import '../../scss/color.scss';
+
+.mainDiv{
+    background-color: #f5f5f5;
+    width:271px;
+    height:43px;
+    border-radius: 4px;
+   margin-top: 10px
+  
+}
+
+.icon
+{
+font-size: 20px;
+width:12px;
+height:12px; 
+// margin-top: -10px;
+cursor: pointer;
+}
+
+.text_color1{
+    display: block;
+    font-size: $_cardheading_font_size;
+}
+
+.margin{
+    // margin-left: 37px;
+    font-size:$_cardheading_font_size;
+    color: $_input_font_color;
+    align-content: center;
+    direction: ltr;
+    cursor: pointer;
+    // margin-top: -8px;
+    // margin-left: -4px;
+}
+
+
+.mainDiv3{
+    background-color: #F5F5F5;
+    width:250px;
+    height:153px;
+    padding: 10px;
+   margin-top: 10px;
+
+}
+
+.form-field{
+    padding: 0 .75em 0 .75em;
+    margin-top: -.25em;
+    position: relative;
+    height: 31px;
+    width: 214px;
+    background-color: white;
+
+}
+
+:host::ng-deep .input {
+
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    -webkit-appearance: textfield;
+    background-color: white;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 0px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: transparent;
+
+   
+}
+
+.input
+{
+    width: 225px;
+    height: 29px;
+    border:transparent;
+    margin-left: 1px;
+    padding: 8px 7px 0px;
+}
+
+.input1{
+        width: 244px;
+        height: 60px;
+        border: transparent;
+        border-radius: 3px;
+        margin-top: 13px;
+        background-color: white;
+        margin-left: 4px;
+    
+
+}
+
+.mat-button1{
+    background-color: #008CFF;
+    height: 31px;
+    width: 74px;
+  }
+
+:host::ng-deep .mat-fab.mat-primary, .mat-flat-button.mat-primary, .mat-mini-fab.mat-primary, .mat-raised-button.mat-primary {
+    background-color: #008CFF;
+    height: 29px;
+    width: 78px;
+    margin-top: 5px;
+
+}
+
+:host::ng-deep .mat-button, .mat-flat-button, .mat-icon-button, .mat-stroked-button {
+    box-sizing: border-box;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    outline: 0;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    margin: 0;
+    min-width: 64px;
+    line-height: 36px;
+    padding: 0 16px;
+    border-radius: 4px;
+    height: 29px;
+    width: 78px;
+    margin-top: 5px;
+    overflow: visible;
+}
+
+.sideList{
+    margin: 0;
+    font-size:$_subtext_font_size;
+    color: $_input_font_color;
+    align-content: center;
+
+}
+
+.sideList1{
+    margin: 0;
+    font-size:$_subtext_font_size;
+    color:$button_font_color;
+    align-content: center;
+    height: 12px;
+    width: 22px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+
+}
+.button-cancel{
+    margin-right: 13px;
+    margin-top: 4px;
+}
+
+.spacing{
+    margin-top: 8px;
+    margin-right: 2px;
+
+}
+
+.mainDiv1{
+
+    
+        background-color: #f5f5f5;
+        width:271px;
+       min-height:fit-content;
+        border-radius: 5px;
+        border: 1px solid #F5F5F5;
+        margin-top: 10px;
+
+}
+.nameInput
+{
+    font-family: $font_family;
+    font-size:$_heading_font_size;
+    color: $_input_font_color;
+    font-weight: $_heading_font_weight;
+    padding-left: 10px;
+}
+
+.maticon3{
+
+    margin-top: 6px;
+    font-size: 24px;
+    // color: #666D70;
+    cursor: pointer;
+}
+
+.maticon1{
+    color: #ACADAD;
+    height: 24px;
+    width: 24px;
+    font-size: 15px;
+    margin-left: 3px;
+    cursor: pointer;
+}
+
+.text {
+    font-size: $_subtext_font_size;
+    color: #ACADAD;
+   // margin-left: -6px;
+    cursor: pointer;
+}
+
+// .mainDiv1{
+//     background-color: #F5F5F5;
+//     width:250px;
+//     height:153px;
+//     margin-top: -4px;
+//     padding: 5px;
+// }
+
+
+.input
+{
+    width: 237px;
+    height: 29px;
+    border:transparent;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 3px;
+    opacity: 1;
+    margin-left: 5px;
+    padding: 0px 7px 0px;
+}
+.fieldsinput1:hover{
+    // visibility: hidden;
+    width: 0%;
+    display: none;
+}
+.fieldsinput1{
+    width: 237px;
+    height: 29px;
+    border:transparent;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 3px;
+    opacity: 1;
+    margin-left: 5px;
+    padding: 8px 7px 0px;
+}
+:host::ng-deep .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    font-size: 15px;
+}
+
+
+.maticon2{
+   // margin-left: -62px;
+    margin-top: 10px;
+    height: 15px;
+    width: 24px;
+    font-size: 16px;
+    cursor: pointer;
+    background: transparent url('../../../assets/images/ic_more_horiz_24px.svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    color: #ACADAD;
+}
+.maticon21{
+    margin-top: 10px;
+    height: 24px;
+    width: 24px;
+    font-size: 16px;
+    cursor: pointer;
+    background: transparent url('../../../assets/images/24px.svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    color: #ACADAD;
+    // padding: 4px;
+    margin-right: 8px;
+}
+
+:host::ng-deep .mat-raised-button {
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: baseline;
+    text-align: center;
+    min-width:22px;
+    line-height: 20px;
+    border-radius: 4px;
+    overflow: visible;
+    font-family: $font_family;
+    background-color:  $primary_color;
+}
+
+.button-cancel{
+    margin: 0;
+    font-size:$_subtext_font_size;
+    color: $_input_font_color;
+    align-content: center;
+    line-height: 2px;
+
+}
+
+.button-add{
+   
+    font-size:$_subtext_font_size;
+    color:$button_font_color;
+    align-content: center;
+    padding-bottom: 2px
+  
+
+}
+.addProjectButton{
+    margin-top: 3px;
+}
+
+
+:host::ng-deep .input[_ngcontent-opo-c1] {
+    width: 237px;
+    height: 29px;
+    border: transparent;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 3px;
+    opacity: 1;
+    margin-left: 5px;
+    outline-color: white;
+    
+}
+
+.bgcolor{
+    background-color: white;
+    width: 98%;
+    margin: 3px;
+    // visibility: hidden;
+}
+.sheettitle{
+    text-align: left;
+font-size: 14px;
+letter-spacing: 0;
+color: #40494D;
+opacity: 1;
+word-break: break-all;
+margin-top: 5px;
+width: 100%
+}
+.bgcolor1{
+    background-color: white;
+    width: 98%;
+    margin: 3px;
+    padding: 4px;
+    text-align: left;
+
+    // visibility: hidden;
+}
+//  .mainDiv1,
+ .bgcolor1:hover{
+    background: #FFFFFF 0% 0% no-repeat;
+box-shadow: 0px 3px 6px #8b8b8b;
+border: 1px solid #ACADAD;
+border-radius: 3px;
+opacity: 1;
+
+}
+.format{
+    text-align: left;
+    font-size:10px;
+    letter-spacing: 0;
+    color: #ACADAD;
+    opacity: 1;   
+}
+.fieldsinput:hover{
+    visibility: hidden;
+}
+.maticon2:hover{
+    // background: url("../../../assets/images/ic_create_24px.svg") no-repeat;
+}
+
+
+:host::ng-deep .mat-button[_ngcontent-our-c5] {
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: baseline;
+    text-align: center;
+    min-width:22px;
+    line-height: 20px;
+    border-radius: 4px;
+    overflow: visible;
+    font-family: Lato;
+    border: 1px solid #DADCE0;
+}

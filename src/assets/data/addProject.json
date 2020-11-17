@@ -1,0 +1,45 @@
+{
+    "addProject": 
+    [
+        {
+            "projectName": "Tech Management",
+            "description": "Tech Management"
+        },
+        {
+            "projectName": "Fundoo Sheets",
+            "description": "Fundoo Sheets"
+        },
+        {
+            "projectName": "Fundoo Notes",
+            "description": "Fundoo Notes"
+        },
+        {
+            "projectName": "Chat App",
+            "description": "Chat App"
+        },
+        {
+            "projectName": "Coding Cafe",
+            "description": "Coding Cafe"
+        },
+        {
+            "projectName": "Data Mining",
+            "description": "Data Mining"
+        },
+        {
+            "projectName": "Employee Management",
+            "description": "Employee Management"
+        },
+        {
+            "projectName": "ChatBot project",
+            "description": "ChatBot project"
+        },
+        {
+            "projectName": "Artificial Intelligence",
+            "description": "Artificial Intelligence"
+        },
+        {
+            "projectName": "Cryptography",
+            "description": "Cryptography"
+        }
+    ]
+}

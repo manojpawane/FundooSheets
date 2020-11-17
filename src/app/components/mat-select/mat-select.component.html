@@ -1,0 +1,7 @@
+<mat-select  [(value)]="selectedValue"[formGroup]="selectOption" #mySelect  (selectionChange)="changeValue($event.value)" >
+    <mat-option *ngIf="selectedValue" [value]="null">Clear</mat-option>
+    <mat-option  *ngFor="let key of rows['options']"  [value]="key" class="mat-option" >
+        {{key}}
+    </mat-option>
+</mat-select>
+
