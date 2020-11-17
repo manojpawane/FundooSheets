@@ -1,0 +1,104 @@
+{ 
+	"loginWithNullEmail": {
+		"user":{
+			"email": "",
+			"password": "testing"
+		}
+	},
+	
+	"loginWithInvalidEmail": {
+		"user":{
+			"email": "invalidEmail",
+			"password": "testing"
+		}
+	},
+
+	"loginWithNullPassword": {
+		"user":{
+			"email": "nullPassword@testing.com",
+			"password": ""
+		}
+	},
+
+	"loginWithWrongCredentials": {
+		"user":{
+			"email": "unregistedred@testing.com",
+			"password": "testing"
+		}
+	},
+
+	"loginWithWrongPassword":{
+		"user":{
+			"email":"validuser@testing.com",
+			"password":"wrong_password"
+		}
+	},
+
+	"loginWithSuspendedAccount":{
+		"user":{
+			"email":"suspendedaccount@testing.com",
+			"password":"testing"
+			}
+		},
+
+		"loginWithValidCredentials":{
+			"user":{
+				"email":"validuser@testing.com",
+				"password":"testing"
+				}
+			},
+
+			"registerWithNullEmail": {
+				"user":{
+					"email": "",
+					"password": "testing"
+				}
+			},
+			
+			"registerWithInvalidEmail": {
+				"user":{
+					"email": "invalidEmail",
+					"password": "testing"
+				}
+			},
+		
+			"registerWithNullPassword": {
+				"user":{
+					"email": "nullPassword@testing.com",
+					"password": ""
+				}
+			},
+
+			"regsiterWithExistingEmailId":{
+				"user":{
+					"email":"validuser@testing.com",
+					"password":"testingNewPassword"
+				}
+			},
+
+			"forgotPasswordWithNotExistingEmailId":{
+					"email":"nonExistingEmail@testing.com"
+			},
+
+			"forgotPasswordWithValidDetails":{
+				"email":"manojpawane@gmail.com"
+			},
+
+			"resetPasswordWithValidData":{
+				"password":"testingNewPassword"
+			},
+
+			"metaDetailsForValidUser":{
+				"user":{
+					"_id":"5d5167a91dd9c22334565024"
+				}
+			},
+
+			"metaDetailsForInvalidUser":{
+				"user":{
+					"_id":"5d5167a91dd9c22334561000"
+				}
+			}
+		
+	
+}
