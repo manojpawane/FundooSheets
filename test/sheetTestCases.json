@@ -1,0 +1,368 @@
+{
+    "addSheetWithNullSheetName": {
+        "sheet": {
+            "sheetName": null,
+            "description": "something"
+        },
+        "projectId": "5d5e7d802c2c3d374051bfb7"
+    },
+    "addSheetWithEmptySheetName": {
+        "sheet": {
+            "sheetName": "",
+            "description": "something"
+        },
+        "projectId": "5d5e7d802c2c3d374051bfb7"
+    },
+    "addSheetWithShortSheetName": {
+        "sheet": {
+            "sheetName": "a",
+            "description": "something"
+        },
+        "projectId": "5d5e7d802c2c3d374051bfb7"
+    },
+    "addSheetWithShortDescription": {
+        "sheet": {
+            "sheetName": "newSheet",
+            "description": "som"
+        },
+        "projectId": "5d5e7d802c2c3d374051bfb7"
+    },
+    "addNewSheet": {
+        "sheet": {
+            "sheetName": "newssheet",
+            "description": "something"
+        },
+        "projectId": "5d5e7d802c2c3d374051bfb7"
+    },
+    "updateSheetWithDesMissing": {
+        "field": {
+            "sheetName": "test"
+        },
+        "projectId": "5d5e7d802c2c3d374051bfb7"
+    },
+    "updateSheetWithSheetNameMissing": {
+        "field": {
+            "description": "test"
+        },
+        "projectId": "5d5e7d802c2c3d374051bfb7"
+    },
+    "updateSheetWithSheetIdMissing": {
+        "field": {
+             "sheetName": "test", 
+             "description": "test" 
+            },
+        "projectId": "5d5e7d802c2c3d374051bfb7"
+    },
+    "updateSheetWithSameSheetName": {
+        "field": { 
+            "sheetName": "aaaaaaaaaaaaa",
+             "description": "test" 
+            },
+        "projectId": "5d5e7d802c2c3d374051bfb7",
+        "sheetId": "5d63c9a8059ad737c1244ba3"
+    },
+    "updateSheetWithSameSheetNam": {
+        "field": { 
+            "sheetName": "testing",
+             "description": "test"
+             },
+        "projectId": "5d5e7d802c2c3d374051bfb7",
+        "sheetId": "5d63c9a8059ad737c1244ba3"
+    },
+    "addFieldsWithOptionsWithoutEnum": {
+        "field": [
+            {
+                "name": "location",
+                "headerType": "text",
+                "allowSuggestion": true,
+                "format": "none",
+                "required": true,
+                "options": ["mumbai", "bangalore"]
+            }
+        ],
+        "projectId": "5d5e7d802c2c3d374051bfb7",
+        "sheetId": "5d63c9a8059ad737c1244ba3"
+
+    },
+    "adDFieldsWithMultipleEntries":{
+        "field": [
+            {
+                "name": "location",
+                "headerType": "text",
+                "allowSuggestion": true,
+                "format": "none",
+                "required": true
+            },
+            {
+                "name": "address",
+                "headerType": "text",
+                "allowSuggestion": true,
+                "format": "none",
+                "required": true
+            }
+        ],
+        "projectId": "5d5e7d802c2c3d374051bfb7",
+        "sheetId": "5d63c9a8059ad737c1244ba3"
+
+    },
+    "addFieldsWithOptionsMissing": {
+        "field": [
+            {
+                "name": "location",
+                "headerType": "enum",
+                "allowSuggestion": true,
+                "format": "none",
+                "required": true
+            }
+        ],
+        "projectId": "5d5e7d802c2c3d374051bfb7",
+        "sheetId": "5d63c9a8059ad737c1244ba3"
+
+    },
+    "addFieldsWithRequiredFieldsMissing":{
+        "field": [
+            {
+                "name": "location",
+                "headerType": "text",
+                "allowSuggestion": true,
+                "format": "none"
+            }
+        ],
+        "projectId": "5d5e7d802c2c3d374051bfb7",
+        "sheetId": "5d63c9a8059ad737c1244ba3"
+
+    },
+    "addFieldNameOfTypeOtherThanString":{
+        "field": [
+            {
+                "name": true,
+                "headerType": "text",
+                "allowSuggestion": true,
+                "format": "none",
+                "required": true
+            }
+        ],
+        "projectId": "5d5e7d802c2c3d374051bfb7",
+        "sheetId": "5d63c9a8059ad737c1244ba3"
+    },
+    "addFieldAutoSuggestionOfTypeOtherThanBoolean":{
+        "field": [
+            {
+                "name": "location",
+                "headerType": "text",
+                "allowSuggestion": "true",
+                "format": "none",
+                "required": true
+            }
+        ],
+        "projectId": "5d5e7d802c2c3d374051bfb7",
+        "sheetId": "5d63c9a8059ad737c1244ba3"
+
+    },
+    "addHeaderTypeOutOfEnum":{
+        "field": [
+            {
+                "name": "location",
+                "headerType": "something",
+                "allowSuggestion": true,
+                "format": "none",
+                "required": true
+            }
+        ],
+        "projectId": "5d5e7d802c2c3d374051bfb7",
+        "sheetId": "5d63c9a8059ad737c1244ba3"
+
+    },
+    "addFormatOutOfEnum": {
+        "field": [
+            {
+                "name": "location",
+                "headerType": "text",
+                "allowSuggestion": true,
+                "format": "something",
+                "required": true
+            }
+        ],
+        "projectId": "5d5e7d802c2c3d374051bfb7",
+        "sheetId": "5d63c9a8059ad737c1244ba3"
+
+    },
+    "addFieldWithWrongSheetId":{
+        "field": [
+            {
+                "name": "location",
+                "headerType": "text",
+                "allowSuggestion": true,
+                "format": "none",
+                "required": true
+            }
+        ],
+        "projectId": "5d5e7d802c2c3d374051bfb5",
+        "sheetId": "5d63c9a8059ad737c1244ba3"
+
+    },
+    "addFieldSuccessFully": {
+        "field": [
+            {
+                "name": "email",
+                "headerType": "text",
+                "allowSuggestion": true,
+                "format": "email",
+                "required": true
+            }
+        ],
+        "projectId": "5d5e7d802c2c3d374051bfb7",
+        "sheetId": "5d63c9a8059ad737c1244ba3"
+
+    },
+    "updateFieldWithWrongSheetId":{
+        "name": "location",
+        "projectId": "5d5e7d802c2c3d374051bfb7",
+        "sheetId": "5d63c9a8059ad737c1244ba2"
+
+    },
+    "updateFieldWrongRecord":	{
+        "name": "location",
+        "projectId": "5d5e7d802c2c3d374051bfb7",
+        "sheetId": "5d63c9a8059ad737c1244ba3",
+        "fieldId": "5d64cee05026e72c0de67a01"
+    },
+    "updateFieldWithSameFieldName":{
+        "name": "location",
+        "projectId": "5d5e7d802c2c3d374051bfb7",
+        "sheetId": "5d63c9a8059ad737c1244ba3",
+        "fieldId": "5d6523750460915271b60810"
+    },
+    "updateFieldSuccessfully":	{
+        "name": "tech stack",
+        "projectId": "5d5e7d802c2c3d374051bfb7",
+        "sheetId": "5d63c9a8059ad737c1244ba3",
+        "fieldId": "5d6523750460915271b60810"
+    },
+    "deleteFieldWithWrongSheetId":	{
+        "projectId": "5d5e7d802c2c3d374051bfb1",
+        "sheetId": "5d63c9a8059ad737c1244ba3",
+        "fieldId": "5d64cee05026e72c0de67a02"
+    },
+    "deleteFieldWithWrongFieldId":	{
+        "projectId": "5d5e7d802c2c3d374051bfb7",
+        "sheetId": "5d64cea65026e72c0de67a09",
+        "fieldId": "5d64cee05026e72c0de67a02"
+    },
+    "deleteFieldWithWrongField":	{
+        "projectId": "5d5e7d802c2c3d374051bfb7",
+        "sheetId": "5d64cea65026e72c0de67a01",
+        "fieldId": "5d64cee05026e72c0de67a09"
+    },
+    "deleteSheetField":{
+        "projectId": "5d5e7d802c2c3d374051bfb7",
+        "sheetId": "5d64cea65026e72c0de67a01",
+        "fieldId": "5d64cee05026e72c0de67a09"
+    },
+    "getSheetRecordsWithWrongProjectId":{
+        "projectId": "5d5e7d802c2c3d374051bfb2",
+        "sheetId": "5d64cea65026e72c0de67a01"
+    },
+    "getSheetRecordsWithWrongSheetId":	{
+        "projectId": "5d5e7d802c2c3d374051bfb8",
+        "sheetId": "5d64cea65026e72c0de67a09"
+    },
+    "getSheetRecordsSuccessfully":{
+        "projectId": "5d5e7d802c2c3d374051bfb8",
+        "sheetId": "5d64cea65026e72c0de67a01"
+    },
+    "getAllSheets":{
+        "projectId": "5d5e7d802c2c3d374051bfb7"
+    },
+    "addSheetRecordsWithWrongProjectId":{
+        "records": [
+            {
+               "name": "tech stack",
+               "value": "mern"
+             },
+             {
+               "name": "number of engineers",
+               "value": "16"
+             }
+           ],
+        "projectId": "5d5e7d802c2c3d374051bfb1",
+        "sheetId": "5d63c9a8059ad737c1244ba3"
+
+    },
+    "addSheetRecordsWithWrongSheetId":{
+        "records": [
+            {
+               "name": "tech stack",
+               "value": "mern"
+             },
+             {
+               "name": "number of engineers",
+               "value": "16"
+             }
+           ],
+        "projectId": "5d5e7d802c2c3d374051bfb7",
+        "sheetId": "5d63c9a8059ad737c1244ba1"
+
+    },
+    "addSheetRecordsWithRequiredFieldMissing":{
+        "records": [
+            {
+               "name": "location",
+               "value": "mumbai"
+             }
+           ],
+        "projectId": "5d5e7d802c2c3d374051bfb7",
+        "sheetId": "5d63c9a8059ad737c1244ba3"
+
+    },
+    "addSheetRecordsWithWrongDataType":{
+        "records": [
+            {
+               "name": "tech stack",
+               "value": false
+             },
+             {
+                 "name":"location",
+                 "value":"mumbai"
+             }
+           ],
+        "projectId": "5d5e7d802c2c3d374051bfb7",
+        "sheetId": "5d63c9a8059ad737c1244ba3"
+
+    },
+    "addSheetRecordsWithOutOfEnumRange":{
+        "records": [
+            {
+               "name": "tech stack",
+               "value": "blockchain"
+             },
+             {
+                 "name":"location",
+                 "value":"mumbai"
+             }
+           ],
+        "projectId": "5d5e7d802c2c3d374051bfb7",
+        "sheetId": "5d6905a013a08334d82df75f"
+
+    },
+    "addSheetRecords":{
+        "records": [
+            {
+               "name": "tech stack",
+               "value": "mean"
+             },
+             {
+                 "name":"location",
+                 "value":"mumbai"
+             },
+             {
+                 "name":"email",
+                 "value":"honey@gmail.com"
+             }
+           ],
+        "projectId": "5d5e7d802c2c3d374051bfb7",
+        "sheetId": "5d6905a013a08334d82df75f"
+
+    }
+    
+}

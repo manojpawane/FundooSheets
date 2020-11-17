@@ -1,0 +1,161 @@
+{
+    "nullProjectNameAddAction":{
+        "projectName": "",
+        "description": "Hello, Katherine Avila! You have 6 unread messages.",
+        "type": "Beach Schultz",
+        "userId": "5d4d162e08b90d3568248fed"
+    },
+
+    "metaDetailsForValidUser":{
+        "user":{
+            "_id":"5d4d162e08b90d3568248fed"
+        }
+    },
+
+    "existingProjectNameError":{
+        "projectName": "project name for user already exits",
+        "description": "Hello, Katherine Avila! You have 6 unread messages.",
+        "type": "Beach Schultz",
+        "userId": "5d4d162e08b90d3568248fed",
+        "createdBy": "5d4d162e08b90d3568248fed",
+        "updatedBy": "5d4d162e08b90d3568248fed"
+    },
+
+    "validProjectDetailsForInvalidUserTesting":{
+        "projectName": "new Project name",
+          "description": "Hello, Katherine Avila! You have 6 unread messages.",
+          "type": "Beach Schultz",
+          "userId": "5d4d162e08b90d3568248fed",
+          "createdBy": "5d4d162e08b90d3568248fed",
+          "updatedBy": "5d4d162e08b90d3568248fed"
+    },
+
+    "metaDetailsForInvalidUser":{
+        "user":{
+            "_id":"5d5167a91dd9c22334561000"
+        }
+    },
+
+    "projectDetailsWithProjectNameWithSpecialCharacter":{
+        "projectName": "new/*/*Project/*name",
+          "description": "Hello, Katherine Avila! You have 6 unread messages.",
+          "type": "Beach Schultz",
+          "userId": "5d4d162e08b90d3568248fed",
+          "createdBy": "5d4d162e08b90d3568248fed",
+          "updatedBy": "5d4d162e08b90d3568248fed"
+    },
+
+    "projectDetailsWithAppropriateData":{
+      "projectName": "new project name details",
+      "description": "Hello, Katherine Avila! You have 6 unread messages.",
+      "type": "Beach Schultz",
+      "userId": "5d4d162e08b90d3568248fed",
+      "projectId":"5d5f78355bff27440ce90e7b"
+    },
+
+    "metaValidUserDetailsWithNoProject":{
+        "user":{
+            "_id":"5d51145375e63334d89df4a0"
+        }
+    },
+
+    "inValidProjectDetailsForUpdateAction":{
+        "projectName": "project name for user already exits",
+        "description": "Hello, Katherine Avila! You have 6 unread messages.",
+        "type": "Beach Schultz",
+        "projectId":"5d5167a91dd9c22334565024",
+        "userId": "5d4d162e08b90d3568248fed",
+        "updatedBy": "5d4d162e08b90d3568248fed"
+    }, 
+
+    "sameProjectNameButWithAllOtherValidData":{
+      "projectName": "project name for user already exits",
+      "description": "Hello, Katherine Avila! You have 6 unread messages.",
+      "type": "Beach Schultz",
+      "projectId":"5d5f78355bff27440ce90e7b",
+      "userId": "5d4d162e08b90d3568248fed"
+    },
+
+    "invalidProjectDetailsWithProjectNameAsASpecialCharacter":{
+        "projectName": "project/*//*/&&",
+        "description": "Hello, Katherine Avila! You have 6 unread messages.",
+        "type": "Beach Schultz",
+        "projectId":"5d5f78355bff27440ce90e7b",
+        "userId": "5d4d162e08b90d3568248fed"
+    },
+
+    "metaValidUserDetailsForUpdateProjectDetails":{
+        "user":{
+            "_id":"5d4d162e08b90d3568248fed"
+        }
+    },
+
+    "validProjectDetailsForUpdate":{
+      "projectName": "project 12",
+      "description": "Hello, Katherine Avila! You have 6 unread messages.",
+      "type": "Beach Schultz",
+      "projectId":"5d5ea1fbb72ae702d4d9f625",
+      "userId": "5d5167a91dd9c22334565024"
+    },
+
+    "metaValidUserDetails":{
+        "user":{
+            "_id":"5d5167a91dd9c22334565024"
+        }
+    },
+
+    "updateTheSameNoteWithSameProjectName":{
+      "projectName": "project 2",
+      "description": "Hello, Katherine Avila! You have 6 unread messages.",
+      "type": "Beach Schultz",
+      "projectId":"5d5ea202b72ae702d4d9f626"
+    },
+
+    "metaUserDetailsForUpdateProject":{
+        "user":{
+            "_id":"5d5167a91dd9c22334565024"
+        }
+    },
+
+    "appropriateDataForUpdateProject":{
+        "projectName": "project 12",
+        "description": "new updated values",
+        "type": "Beach Schultz",
+        "projectId":"5d5ea202b72ae702d4d9f626"
+    },
+
+    "invalidProjectForDeleteAction":{
+        "projectId":"5d5167a91dd9c22334565024"
+    },
+
+    "invalidUserForDeleteProject":{
+        "user":{
+            "_id":"5d5167a91dd9c22334565024"
+        }
+    },
+
+    "metaInvalidUserForDelete":{
+        "user":{
+            "_id":"5d5167a91dd9c22334565025"
+        }
+    },
+
+    "projectDetailsForDeleteActionForInvalidUser":{
+        "projectId":"5d5ea1fbb72ae702d4d9f625"
+    },
+
+    "validDetailsForDeleteProject":{
+        "projectId":"5d5ea1fbb72ae702d4d9f625"
+    },
+
+    "invalidDetailsForGetProjectById":{
+        "projectId":"5d5ea202b72ae702d4d9f627"
+    },
+
+    "validProjectDetailsForGetById":{
+        "projectId":"5d5ea209b72ae702d4d9f627"
+    }
+
+
+    
+}

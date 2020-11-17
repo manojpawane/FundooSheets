@@ -1,0 +1,234 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Project",
+        "description": "",
+        "version": "1.0"
+    },
+    "produces": [
+        "application/json"
+    ],
+    "host": "localhost:3001/api",
+    "paths": {
+        "/projects": {
+            "post": {
+                "x-swagger-router-controller": "project",
+                "operationId": "addproject",
+                "tags": [
+                    "project"
+                ],
+                "description": "add project",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "type": "object",
+                        "reguired": true,
+                        "schema": {
+                            "$ref": "#/definitions/register"
+                        }
+                    }
+                ],
+                "responses": {}
+            },
+            "get": {
+                "x-swagger-router-controller": "user",
+                "operationId": "getprojectlist",
+                "tags": [
+                    "project"
+                ],
+                "description": "get project list",
+                "responses": {}
+            }         
+        },
+        "/projects/{projectId}/sheets":{
+            "post":{
+                "x-swagger-router-controller": "sheet",
+                "operationId": "addSheet",
+                "description": "add a sheet",  
+                "parameters": [
+                    {
+                        "name": "authorization",
+                        "in": "header",
+                        "type": "string",
+                        "reguired": true
+                    },
+                    {
+                        "name": "projectId",
+                        "in": "path",
+                        "type": "string",
+                        "reguired": true
+                       
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "type": "object",
+                        "reguired": true,
+                        "schema": {
+                            "$ref": "#/definitions/addSheetFields"
+                        }
+                       
+                    }
+                    
+                ],
+                "responses": {}
+            }
+        },
+        "/projects/{projectId}/{sheetId}/sheets":{
+            "post":{
+                "x-swagger-router-controller": "sheet",
+                "operationId": "addSheetFields",
+                "description": "add sheet fields",  
+                "parameters": [
+                    {
+                        "name": "authorization",
+                        "in": "header",
+                        "type": "string",
+                        "reguired": true
+                    },
+                    {
+                        "name": "projectId",
+                        "in": "path",
+                        "type": "string",
+                        "reguired": true
+                       
+                    },
+                    {
+                        "name": "sheetId",
+                        "in": "path",
+                        "type": "string",
+                        "reguired": true
+                       
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "type": "object",
+                        "reguired": true,
+                        "schema": {
+                            "$ref": "#/definitions/addSheet"
+                        }
+                       
+                    }
+                    
+                ],
+                "responses": {}
+            }
+        }
+       
+     
+       
+    },
+    "definitions": {
+        "register": {
+            "type": "object",
+            "properties": {
+                "user": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "String"
+                        },
+                        "password": {
+                            "type": "String"
+                        }
+                    }
+                }
+            },
+            "example": {
+                "user": {
+                    "email": "nagendra.singh@bridgelabz.com",
+                    "password": "abcd1234"
+                }
+            }
+        },
+        "login": {
+            "type": "object",
+            "properties": {
+                "user": {
+                    "type": "object",
+                    "properties": {
+                        "email": {
+                            "type": "String"
+                        },
+                        "password": {
+                            "type": "String"
+                        }
+                    }
+                }
+            },
+            "example": {
+                "user": {
+                    "email": "nagendra.singh@bridgelabz.com",
+                    "password": "abcd1234"
+                }
+            }
+        },
+        "addSheet": {
+            "type": "object",
+            "properties": {
+                "sheet": {
+                    "type": "object",
+                    "properties": {
+                        "sheetName": {
+                            "type": "String"
+                        },
+                        "description": {
+                            "type": "String"
+                        }
+                    }
+                }
+            },
+            "example": {
+                "sheet": {
+                    "sheetName": "apply",
+                    "description": "apply list"
+                }
+            }
+        },
+        
+        "addSheetFields": {
+            "type": "object",
+            "properties": {
+                "sheet": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "String"
+                        },
+                        "headerType": {
+                            "type": "String"
+                        },
+                        "allowSuggestion": {
+                            "type": "boolean"
+                        },
+                        "format": {
+                            "type": "String"
+                        },
+                        "required": {
+                            "type": "boolean"
+                        },
+                         "options": {
+                             "type": "array"
+                        }
+                    }
+                }
+            },
+            "example": {
+                "sheet":[
+                 {
+                   "name": "tech stack",
+                   "headerType": "enum",
+                   "allowSuggestion": true,
+                   "format": "none",
+                   "required":true,
+                   "options":["ML","java","mean","mern"]
+                 }
+               
+               ]
+               }
+        }
+    }
+}
+
